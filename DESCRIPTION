@@ -1,0 +1,33 @@
+Toolbox: Scilab Grpahviz Toolbox
+
+Title: Scilab Graphviz Toolbox
+
+Summary: Scilab toolbox to call graphviz-graph visualization functions
+
+Version: 1.0.0
+
+Author: Hariharan Ravi
+	Neelakanda Bharathiraja Urgavalan
+	Ajay Krishna Vasanthakumar
+
+Maintainer: contactus@sysenso.com
+
+Category: Graph Drawing
+
+Entity: Sysenso Systems Private Limited, India
+
+WebSite: http://www.scilab.org
+
+License: GPL 2.0
+
+ScilabVersion: >= 6.1.0
+
+Depends: >= IPCV 4.1.2
+
+Date: 2020-Sep-01
+
+Description: 
+Graphviz (Graph Visualization Software) is an open-source package for drawing graphs specified in DOT(Graph Description language) files.
+This Scilab toolbox helps the users to do all graph drawing and viewing activities within Scilab by calling graphviz-graph visualization functions.
+Please read more information in README.md and uses demos/help files to get more details.
+This work is a part of the Scilab Toolbox Hackathon organised by FOSSEE, IIT Bombay in June-July 2020. (https://fossee.in/ https://scilab.in/).

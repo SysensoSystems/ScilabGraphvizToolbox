@@ -1,0 +1,18 @@
+digraph {
+    label="How to make sure 'input' is valid";
+ 
+    node[shape="box", style="rounded"]
+       start; end;
+    node[shape="parallelogram", style=""]
+       message; input;
+    node[shape="diamond", style=""]
+       if_valid;
+ 
+    start -> input;
+    input -> if_valid;
+    if_valid -> message[label="no"];
+    if_valid -> end[label="yes"];
+    message -> input;     
+ 
+    {rank=same; message input}
+}

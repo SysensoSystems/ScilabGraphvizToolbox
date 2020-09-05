@@ -1,0 +1,13 @@
+digraph finite_state_machine {
+	labelloc="t";
+    label="Automatic Transmission";
+	rankdir=LR;
+	size="8,5"
+	node [shape = circle];
+	Neutral -> Gear1 [ label = "Speed > 0 km/hr" ]
+	Gear1 -> Gear2 [ label = "Speed > 20 km/hr" ]
+	Gear2 -> Gear3 [ label = "Speed > 40 km/hr" ]
+	[rank = "same"]Gear3 -> Gear4 [ label = "Speed > 60 km/hr" ]
+	Gear3 -> Brake [ label = "Applying Brake" ]
+	Brake -> Neutral [ label = "When Brake Apllied" ]
+}

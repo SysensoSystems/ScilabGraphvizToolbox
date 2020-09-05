@@ -1,0 +1,11 @@
+﻿,main,parse,cleanup,init,execute,make_string,compare,printf,check,test
+main,0,1,1,1,0,0,0,1,0,0
+parse,0,0,0,0,1,0,0,0,0,0
+cleanup,0,0,0,0,0,0,0,0,0,0
+init,0,0,0,0,0,1,0,0,0,0
+execute,0,0,0,0,0,1,1,1,0,0
+make_string,0,0,0,0,0,0,0,0,0,0
+compare,0,0,0,0,0,0,0,0,0,0
+printf,0,0,0,0,0,0,0,0,0,0
+check,0,0,0,0,0,0,0,0,0,1
+test,0,0,0,0,0,0,0,0,0,0

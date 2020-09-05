@@ -1,0 +1,70 @@
+//=============================================================================
+// scilab_graphviz - Scilab Graphviz Toolbox
+// Copyright (C) 2020 Sysenso Systems Private Limited
+//=============================================================================
+//
+
+function scilab_graphvizlib = startModule()
+
+    TOOLBOX_NAME  = "scilab_graphviz";
+    TOOLBOX_TITLE = "Scilab Graphviz Toolbox";
+
+    mprintf("Start " + TOOLBOX_NAME + "\n");
+    mprintf(TOOLBOX_TITLE + "\n");
+    mprintf("Sysenso Systems Private Limited, India\n");
+
+    if isdef("scilab_graphvizlib") then
+        warning("scilab_graphviz library is already loaded");
+        return;
+    end
+
+    etc_tlbx  = get_absolute_file_path("scilab_graphviz.start");
+    etc_tlbx  = getshortpathname(etc_tlbx);
+    root_tlbx = strncpy(etc_tlbx,length(etc_tlbx)-length("\etc\"))+filesep();
+    // Set the environment path 
+    setenv("scilab_graphviz_path",root_tlbx);
+
+    //Load  functions library
+    // =============================================================================
+    mprintf("\tLoad macros\n");
+    pathmacros = pathconvert( root_tlbx ) + "macros" + filesep();
+    scilab_graphvizlib = lib(pathmacros);
+
+    // load localization
+    addlocalizationdomain(TOOLBOX_NAME, root_tlbx + "/locales");
+
+    // Load and add help chapter
+    // =============================================================================
+    if or(getscilabmode() == ["NW";"STD"]) then
+        mprintf("\tLoad help\n");
+        path_addchapter = pathconvert(root_tlbx +"jar");
+        if ( isdir(path_addchapter) <> [] ) then
+            add_help_chapter(TOOLBOX_NAME, path_addchapter, %F);
+        end
+    end
+
+    // Load demos
+    // =============================================================================
+    if or(getscilabmode() == ["NW";"STD"]) then
+        mprintf("\tLoad demos\n");
+        pathdemos = pathconvert(root_tlbx+"/demos/scilab_graphviz_toolbox.dem.gateway.sce", %F, %T);
+        add_demo(TOOLBOX_TITLE, pathdemos);
+    end
+
+    // Load Preferences GUI
+    // =============================================================================
+    // if getscilabmode() == "STD" then
+    //  addModulePreferences(TOOLBOX_TITLE, root_tlbx, etc_tlbx + "scilab_toolbox_preferences.xml");
+    //  end
+
+endfunction
+// ============================================================================
+if isdef("scilab_graphvizlib") then
+    warning(" Scilab Graphviz library is already loaded");
+    return;
+else
+    scilab_graphvizlib = startModule();
+    clear startModule; // remove startModule on stack
+end
+// =============================================================================
+

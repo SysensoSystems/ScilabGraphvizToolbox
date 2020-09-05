@@ -1,0 +1,12 @@
+digraph Path {
+
+	A -> B ;
+	A -> C ;
+	B -> E ;
+	E -> F ;
+	A -> F ;
+	C -> H ;
+	H -> I ;
+	H -> F ;
+
+}

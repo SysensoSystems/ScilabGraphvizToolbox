@@ -1,0 +1,21 @@
+digraph hierarchy {
+	
+	// Company Management Hierarchy
+		
+	CompanyManagement -> {TopManagement MiddleManagement FristLineManagement}
+	general[label="General Manager"]
+	regional[label="Regional Manager"]
+	Board[label="Board Of Director"]
+	Chief[label="Chief Executive Officer"]
+	TopManagement -> Chairman
+	Chairman -> VicePresident
+	VicePresident -> Board
+	Board -> Chief	
+	MiddleManagement -> general
+	general -> regional
+	office[label="Office Manager"]
+	leader[label="Team Leader"]
+	FristLineManagement -> Supervisor
+	Supervisor -> office
+	office -> leader
+}

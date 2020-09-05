@@ -1,0 +1,11 @@
+digraph Disconnected {
+
+	A -> B ;
+	B -> D ;
+	B -> E ;
+	B -> F ;
+	C -> H ;
+	H -> I ;
+	H -> J ;
+
+}

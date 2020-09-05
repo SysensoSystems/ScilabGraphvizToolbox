@@ -1,0 +1,34 @@
+digraph G {
+center = 1;
+size="10,10";
+Tom;
+John;
+Davis;
+James;
+Rogers;
+Kumar;
+King;
+Chan;
+Asif;
+Peter;
+Tom -> Rogers ;
+Tom -> Asif ;
+John -> Davis ;
+Davis -> John ;
+Davis -> Kumar ;
+Davis -> Peter ;
+James -> Peter ;
+Rogers -> Tom ;
+Rogers -> Kumar ;
+Rogers -> Asif ;
+Kumar -> Davis ;
+Kumar -> Rogers ;
+King -> Chan ;
+King -> Peter ;
+Chan -> King ;
+Asif -> Tom ;
+Asif -> Rogers ;
+Peter -> Davis ;
+Peter -> James ;
+Peter -> King ;
+}
