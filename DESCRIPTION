@@ -31,3 +31,4 @@ Graphviz (Graph Visualization Software) is an open-source package for drawing gr
 This Scilab toolbox helps the users to do all graph drawing and viewing activities within Scilab by calling graphviz-graph visualization functions.
 Please read more information in README.md and uses demos/help files to get more details.
 This work is a part of the Scilab Toolbox Hackathon organised by FOSSEE, IIT Bombay in June-July 2020. (https://fossee.in/ https://scilab.in/).
+Source Code Path - https://github.com/BharathiSysenso/ScilabGraphvizToolbox.git
